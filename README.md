@@ -2,7 +2,10 @@
 
 Project files for tutorial 07 of the Godot 4 series by Phaix on YouTube (https://www.youtube.com/@Phaix).
 
-Make a procedural level generator in Godot 4 show its work: draw the bounds of every planned room and the markers inside it as 3D lines with an ImmediateMesh, record every room type the generator turned down and flash it in red where it would have stood, plan the same chain one room per key press with a coroutine (and the ticket that stops the old one), and pin a few seeds in a headless check so a change by accident fails loudly. Every step is its own project folder.
+Draw and step through the room generator of a game like Roblox DOORS in Godot 4.
+We build debug views in 3D: the bounds and markers of every room, the rooms it turned down, one room per key press, and seeds pinned so that nobody changes the generator by accident.
+
+Lines in 3D with an ImmediateMesh, three pixels wide at any distance, a debug view that only reads and draws, the markers of a room drawn as arrows and crosses with the room's transform, a generate-and-test loop that writes down what it turned down so the rejected rooms flash red where they would have stood, a coroutine that plans the same chain one room per key press and the ticket that stops the old one, and a headless check that pins five seeds so a change by accident fails loudly. Every step is its own project folder.
 
 ![Screenshot](screenshot.png)
 
@@ -14,10 +17,10 @@ that step. The project's main scene is the final step.
 
 | Folder | Part of the video |
 |---|---|
-| `steps/step_00_start` | Starting point (the final state of the previous tutorial) |
+| `steps/step_00_start` | Starting point (the final state of tutorial S1) |
 | `steps/step_01_room_bounds` | Step 1 - Lines in 3D |
 | `steps/step_02_markers` | Step 2 - A marker is a transform |
-| `steps/step_03_rejected` | Step 3 - The generator writes its tests down |
+| `steps/step_03_rejected` | Step 3 - The generator writes down what it turned down |
 | `steps/step_04_step_through` | Step 4 - One room per key press |
 | `steps/step_05_pinned_seeds` | Step 5 - Pin the seeds |
 
@@ -36,3 +39,4 @@ godot --headless --path . -s res://tests/run_tests.gd
 ## License
 
 Code and scenes: MIT (see LICENSE).
+The figure and its animations: Animated Characters Protagonists by Kenney (www.kenney.nl), CC0, see character/License.txt.

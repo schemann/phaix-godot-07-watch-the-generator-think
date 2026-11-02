@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://steps/step_00_start/level.gd" id="1_level"]
+[ext_resource type="Script" path="res://steps/step_00_start/room_camera.gd" id="9_camera"]
 
 [ext_resource type="Script" path="res://steps/step_00_start/debug_map.gd" id="2_map"]
 
@@ -45,6 +46,10 @@ directional_shadow_max_distance = 300.0
 
 [node name="Level" type="Node3D" parent="."]
 script = ExtResource("1_level")
+
+[node name="RoomCamera" type="Camera3D" parent="." node_paths=PackedStringArray("level")]
+script = ExtResource("9_camera")
+level = NodePath("../Level")
 
 [node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("level")]
 script = ExtResource("3_hud")
