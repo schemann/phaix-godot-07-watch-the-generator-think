@@ -36,6 +36,10 @@ in the video and in the HUD.
 godot --headless --path . -s res://tests/run_tests.gd
 ```
 
+## Support
+
+Support the channel: https://ko-fi.com/phaix or https://github.com/sponsors/schemann
+
 ## License
 
 Code and scenes: MIT (see LICENSE).
